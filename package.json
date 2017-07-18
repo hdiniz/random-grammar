@@ -2,7 +2,7 @@
   "name": "random-grammar",
   "version": "0.5.0",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "npm run make-grammar && tsc",
     "make-grammar": "java org.antlr.v4.Tool -o src\\generated -no-listener -visitor -Dlanguage=JavaScript Random.g4",
