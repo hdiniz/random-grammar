@@ -10,7 +10,7 @@
     "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "bin": {
-    "random": "./bin/random"
+    "random": "./bin/random.js"
   },
   "author": "Henrique Silva",
   "license": "MIT",
