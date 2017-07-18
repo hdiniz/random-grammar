@@ -1,4 +1,3 @@
-// Define a grammar called Hello
 grammar Random;
 
 request: single
@@ -9,7 +8,7 @@ single: space ;
 take: TAKE count=INTEGER FROM space ;
 
 space: INTEGER                                          # limit
-  | l=LENCL lower=number COMMA upper=number r=RENCL   # range
+  | l=LENCL lower=number COMMA upper=number r=RENCL     # range
   | elem (COMMA elem)+                                  # pick
   ;
 

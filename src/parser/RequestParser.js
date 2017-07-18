@@ -94,4 +94,13 @@ export class RequestParser extends RandomVisitor {
     return new RangeGenerator(lower, upper);
   }
 
+  visitLimit(ctx) {
+    let limit = parseInt(ctx.getText());
+    if (limit == NaN || limit < 0) {
+      throw new Error(`invalid range limit=${ctx.getText()}`);
+    }
+
+    return new RangeGenerator(0, limit);
+  }
+
 }
