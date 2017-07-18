@@ -1,0 +1,27 @@
+{
+  "name": "random-grammar",
+  "version": "0.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run make-grammar && tsc",
+    "make-grammar": "java org.antlr.v4.Tool -o src\\generated -no-listener -visitor -Dlanguage=JavaScript Random.g4",
+    "make-debug-grammar": "java org.antlr.v4.Tool -o src\\generated Random.g4 & javac generated\\Random*.java",
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "bin": {
+    "random": "./bin/random"
+  },
+  "author": "Henrique Silva",
+  "license": "MIT",
+  "dependencies": {
+    "antlr4": "^4.7.0",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.69",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "typescript": "^2.4.1"
+  }
+}
